@@ -13,13 +13,10 @@ async function connectToDatabase() {
         return dbInstance
     };
 
-    const client = new MongoClient(url);      
+    const client = new MongoClient(url);
 
-    
     await client.connect();
-    
-    const dbInstance = client.db(dbName)
-    
+    dbInstance = client.db(dbName);
     return dbInstance;
 }
 
