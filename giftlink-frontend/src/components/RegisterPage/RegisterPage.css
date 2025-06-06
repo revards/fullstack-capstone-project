@@ -1,0 +1,70 @@
+.register-card {
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.register-card:hover {
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.register-card .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.register-card input {
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+    padding: 0.5rem 0.75rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-card input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.25rem rgba(0, 86, 179, 0.1);
+    outline: none;
+}
+
+.register-card .btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.register-card .btn-primary {
+    background-color: #0056b3;
+    border: none;
+}
+
+.register-card .btn-primary:hover {
+    background-color: #004494;
+    transform: translateY(-1px);
+}
+
+.register-card .btn-secondary {
+    background-color: #dc3545;
+    border: none;
+}
+
+.register-card .btn-secondary:hover {
+    background-color: #c82333;
+}
+
+.register-card .text-primary {
+    color: #0056b3;
+}
+
+.register-card .text-secondary {
+    color: #6c757d;
+}
+
+a.text-primary:hover,
+a.text-secondary:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
