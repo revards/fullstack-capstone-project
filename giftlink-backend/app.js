@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const pinoLogger = require('./logger');
 const authRoutes = require('./routes/authRoutes');
+const path = require('path');
 
 const connectToDatabase = require('./models/db');
 const { loadData } = require("./util/import-mongo/index");
@@ -42,6 +43,13 @@ app.get("/", (req, res) => {
     res.send("Inside the server")
 })
 
+app.use(express.static(path.join(__dirname, '../giftwebsite')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../giftwebsite', 'index.html'));
+});
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
+

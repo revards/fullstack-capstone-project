@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { urlConfig } from '../../config';
 import { useAppContext } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 function LoginPage() {
     const [email, setEmail] = useState('');
@@ -62,7 +62,7 @@ function LoginPage() {
                                 className="form-control"
                                 placeholder="Enter your email"
                                 value={email}
-                                onChange={(e) => {setEmail(e.target.value); setIncorrect("")}}
+                                onChange={(e) => { setEmail(e.target.value); setIncorrect("") }}
                             />
                         </div>
                         <div className="mb-4">
@@ -73,14 +73,14 @@ function LoginPage() {
                                 className="form-control"
                                 placeholder="Enter your password"
                                 value={password}
-                                onChange={(e) => {setPassword(e.target.value);setIncorrect("")}}
+                                onChange={(e) => { setPassword(e.target.value); setIncorrect("") }}
                             />
-                            
-                            <span style={{color:'red',height:'.5cm',display:'block',fontStyle:'italic',fontSize:'12px'}}>{incorrect}</span>
+
+                            <span style={{ color: 'red', height: '.5cm', display: 'block', fontStyle: 'italic', fontSize: '12px' }}>{incorrect}</span>
                         </div>
                         <button className="btn btn-primary w-100 mb-3" onClick={handleLogin}>Login</button>
                         <p className="mt-4 text-center">
-                            New here? <a href="/app/register" className="text-primary">Register Here</a>
+                            New here? <Link className="text-primary" to="/app/register">Register Here</Link>
                         </p>
                     </div>
                 </div>

@@ -91,7 +91,7 @@ function DetailsPage() {
                         {gift.condition}
                     </p>
                     <p><strong>Date Added:</strong>
-                        {gift.dateAdded}
+                        {gift.date_added}
                     </p>
                     <p><strong>Age (Years):</strong>
                         {gift.age}
