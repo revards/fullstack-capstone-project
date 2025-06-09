@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: giftapp-container
-        image: us.icr.io/sn-labs-rudolfs110/giftapp
+        image: 
         ports:
         - containerPort: 3060
       imagePullSecrets:
